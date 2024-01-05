@@ -38,9 +38,45 @@ public class Person {
         setMother(mother);
     }
 
-    public void addChild(Person child) {
-        children.add(child);
+//    public void addParents(Person father, Person mother, Person child){
+//        child.setMother(mother);
+//        mother.addChild(mother, child);
+//        child.setFather(father);
+//        father.addChild(father, child);
+//    }
+
+
+//    public void addChild(Person child) {
+//        children.add(child);
+//    }
+
+    public void addChild(Person parent, Person child){
+        List<Person> kids = parent.getChildren();
+        kids.add(child);
+        parent.setChildren(kids);
     }
+
+//    public void addChild(Person parent, Person child){
+//        List<Person> kids = parent.getChildren();
+//        if(parent.getChildren()!= null) {
+//            for (Person person : parent.getChildren()) {
+//                kids.add(person);
+//            }
+//        }
+//        kids.add(child);
+//        parent.setChildren(kids);
+//        parent.setChildren(kids);
+//    }
+//
+//    public void addChild(Person parent, Person child){
+//        if(parent.getChildren()!= null) {
+//            for (Person person : parent.getChildren()) {
+//                children.add(person);
+//            }
+//        }
+//        children.add(child);
+//        parent.setChildren(children);
+//    }
 
     public void addPet(Pet pet) {
         pets.add(pet);
