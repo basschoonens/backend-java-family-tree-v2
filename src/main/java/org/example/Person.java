@@ -38,45 +38,11 @@ public class Person {
         setMother(mother);
     }
 
-//    public void addParents(Person father, Person mother, Person child){
-//        child.setMother(mother);
-//        mother.addChild(mother, child);
-//        child.setFather(father);
-//        father.addChild(father, child);
-//    }
-
-
-//    public void addChild(Person child) {
-//        children.add(child);
-//    }
-
-    public void addChild(Person parent, Person child){
+    public void addChild(Person parent, Person child) {
         List<Person> kids = parent.getChildren();
         kids.add(child);
         parent.setChildren(kids);
     }
-
-//    public void addChild(Person parent, Person child){
-//        List<Person> kids = parent.getChildren();
-//        if(parent.getChildren()!= null) {
-//            for (Person person : parent.getChildren()) {
-//                kids.add(person);
-//            }
-//        }
-//        kids.add(child);
-//        parent.setChildren(kids);
-//        parent.setChildren(kids);
-//    }
-//
-//    public void addChild(Person parent, Person child){
-//        if(parent.getChildren()!= null) {
-//            for (Person person : parent.getChildren()) {
-//                children.add(person);
-//            }
-//        }
-//        children.add(child);
-//        parent.setChildren(children);
-//    }
 
     public void addPet(Pet pet) {
         pets.add(pet);
@@ -85,9 +51,6 @@ public class Person {
     public void addSibling(Person sibling) {
         siblings.add(sibling);
     }
-
-    // ----------------- //
-
 
     public List<Person> getGrandchildren() {
         List<Person> grandChildren = new ArrayList<>();
@@ -100,83 +63,82 @@ public class Person {
         return grandChildren;
     }
 
-    public String getName () {
+    public String getName() {
         return name;
     }
 
-    public void setName (String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getMiddleName () {
+    public String getMiddleName() {
         return middleName;
     }
 
-    public void setMiddleName (String middleName){
+    public void setMiddleName(String middleName) {
         this.middleName = middleName;
     }
 
-    public String getLastName () {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastName (String lastName){
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public String getSex () {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex (String sex){
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
-    public int getAge () {
+    public int getAge() {
         return age;
     }
 
-    public void setAge ( int age){
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public Person getMother () {
+    public Person getMother() {
         return mother;
     }
 
-    public void setMother (Person mother){
+    public void setMother(Person mother) {
         this.mother = mother;
     }
 
-    public Person getFather () {
+    public Person getFather() {
         return father;
     }
 
-    public void setFather (Person father){
+    public void setFather(Person father) {
         this.father = father;
     }
 
-    public List<Person> getSiblings () {
+    public List<Person> getSiblings() {
         return siblings;
     }
-
-    public void setSiblings (List < Person > siblings) {
+    public void setSiblings(List<Person> siblings) {
         this.siblings = siblings;
     }
 
-    public List<Person> getChildren () {
+    public List<Person> getChildren() {
         return children;
     }
 
-    public void setChildren (List < Person > children) {
+    public void setChildren(List<Person> children) {
         this.children = children;
     }
 
-    public List<Pet> getPets () {
+    public List<Pet> getPets() {
         return pets;
     }
 
-    public void setPets (List < Pet > pets) {
+    public void setPets(List<Pet> pets) {
         this.pets = pets;
     }
 
