@@ -12,15 +12,20 @@ public class Person {
     private int age;
     private Person mother;
     private Person father;
-    private List<Person> siblings = new ArrayList<Person>();
-    private List<Person> children = new ArrayList<Person>();
-    private List<Pet> pets = new ArrayList<Pet>();
+
+    private List<Person> siblings;
+
+    private List<Person> children;
+    private List<Pet> pets;
 
     public Person(String name, String lastName, String sex, int age) {
         this.name = name;
         this.lastName = lastName;
         this.sex = sex;
         this.age = age;
+        this.siblings = new ArrayList<>();
+        this.children = new ArrayList<>();
+        this.pets = new ArrayList<>();
     }
 
     public Person(String name, String middleName, String lastName, String sex, int age) {
@@ -29,6 +34,9 @@ public class Person {
         this.lastName = lastName;
         this.sex = sex;
         this.age = age;
+        this.siblings = new ArrayList<>();
+        this.children = new ArrayList<>();
+        this.pets = new ArrayList<>();
     }
 
     // add methodes hieronder uitgewerkt //
@@ -49,6 +57,9 @@ public class Person {
     }
 
     public void addSibling(Person sibling) {
+        if (siblings == null) {
+            siblings = new ArrayList<>();
+        }
         siblings.add(sibling);
     }
 
